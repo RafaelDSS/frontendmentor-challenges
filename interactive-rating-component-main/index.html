@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass">
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+<body>
+  <main class="container" id="app">
+
+    <!-- Rating -->
+    <div class="card card-1" v-show="!submitted">
+      <span class="star-icon"></span>
+      <h1>How did we do?</h2>
+
+      <p class="message-info">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+
+      <div class="rating">
+        <input type="radio" name="rating" id="rating-a" value="1" v-model="rating"/>
+        <label for="rating-a">1</label>
+
+        <input type="radio" name="rating" id="rating-b" value="2" v-model="rating"/>
+        <label for="rating-b">2</label>
+
+        <input type="radio" name="rating" id="rating-c" value="3" v-model="rating"/>
+        <label for="rating-c">3</label>
+
+        <input type="radio" name="rating" id="rating-d" value="4" v-model="rating"/>
+        <label for="rating-d">4</label>
+
+        <input type="radio" name="rating" id="rating-e" value="5" v-model="rating"/>
+        <label for="rating-e">5</label>
+      </div>
+      <button @click="submit" class="btn">Submit</button>
+    </div>
+
+
+    <!-- Thank you -->
+    <div class="card card-2 center-items" v-show="submitted">
+      <img src="./images/illustration-thank-you.svg" alt="Icon with a credit card and a receipt coming out of the ATM">
+
+      <p class="message-rating-state">You selected {{ rating }} out of 5</p>
+
+      <h2>Thank you!</h2>
+
+      <p class="message-info">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+    </div>
+  </main>
+
+
+  <!-- Footer -->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">RafaelDSS</a>.
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp } = Vue
+
+    createApp({
+      data() {
+        return {
+          rating: -1,
+          submitted: false,
+        }
+      },
+      methods: {
+        submit() {
+          if (this.rating != -1) {
+            this.submitted = !this.submitted
+          }
+        }
+      }
+    }).mount('#app')
+  </script>
+</body>
+</html>
