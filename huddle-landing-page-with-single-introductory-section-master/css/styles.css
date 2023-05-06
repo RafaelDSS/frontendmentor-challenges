@@ -1,0 +1,216 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+p, .btn {
+    font-weight: 400;
+    font-size: .98rem;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.5rem;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 42rem;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url("../images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: var(--violet);
+    color: white;
+}
+
+.col-1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0 1rem;
+    padding-left: 3rem;
+}
+
+.col-2 {
+    display: flex;
+    width: 35%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 3rem;
+}
+
+.col-2 h1 {
+    margin-bottom: 1rem;
+}
+
+.mockup-img {
+    width: 100%;
+}
+
+.logo {
+    width: 11rem;
+    margin-bottom: 4rem;
+}
+
+.btn {
+    width: 11rem;
+    height: 3rem;
+    border: none;
+    background-color: white;
+    border-radius: 5rem;
+    color: var(--violet);
+    margin-top: 1.6rem;
+}
+
+.btn:hover {
+    background-color: var(--soft-magenta);
+    color: white;
+    transition: all .5s;
+}
+
+.social-media {
+    display: flex;
+    position: relative;
+    align-self: flex-end;
+    bottom: -10rem;
+}
+
+.social-media a {
+    text-decoration: none;
+}
+
+.social-media i {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 1rem;
+    border: 0.124rem solid white;
+    color: white;
+    border-radius: 10rem;
+    margin-right: 0.6rem;
+    padding-top: .18rem;
+}
+
+
+.social-media a:hover > i {
+    border: 0.124rem solid var(--soft-magenta);
+    color: var(--soft-magenta);
+    transition: all .5s;
+}
+
+.fa-instagram {
+    font-size: 1.1rem !important;
+}
+
+
+@media (max-width: 74rem) {
+    .container {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        background-image: url("../images/bg-mobile.svg");
+        background-position: top;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: .85rem;
+    }
+
+    .col-1 {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        min-width: 15rem;
+        max-width: 50rem;
+        margin-bottom: 2.7rem;
+    }
+
+    .col-2 {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1;
+        margin: 0;
+    }
+
+    .col-2 p {
+        text-align: center;
+    }
+
+    .logo {
+        width: 7rem;
+        margin-bottom: 3rem;
+        align-self: flex-start;
+    }
+
+    .mockup-img {
+        width: 80%;
+    }
+
+    .btn {
+        width: 11.5rem;
+        height: 2.3rem;
+        margin-bottom: 1.5rem;
+        font-size: .85rem;
+    }
+
+    .social-media {
+        margin-top: 1.6rem;
+        display: flex;
+        bottom: 0;
+        align-self: center;
+    }
+
+    .social-media i {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0.6rem;
+        padding-top: .18rem;
+    }
+
+    .fa-instagram {
+        font-size: 0.8rem !important;
+    }
+}
