@@ -37,16 +37,14 @@ body {
 }
 
 .card-title, .card-details {
-    padding: 10px;
+    padding: 0px 11px;
     text-align: center;
 }
 
 .card-title {
-    margin-bottom: 8px;
+    color: var(--slate-900);
 }
 
 .card-details {
-    margin-top: 0px;
-    padding-top: 0px;
     color: var(--slate-500)
 }
